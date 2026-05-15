@@ -1,7 +1,8 @@
-# CollegeLoanDefaultRisk
+# College Loan Default Risk
+
 Authored by Brian Hunt & Logan Laszewski
 
-# Classification of High Default Risk in U.S. Higher Education Programs
+## Classification of High Default Risk in U.S. Higher Education Programs
 
 This project uses U.S. Department of Education College Scorecard data to classify higher-education programs by elevated federal student-loan default risk. The goal is to identify which program, credential, regional, and institutional characteristics are most associated with higher borrower default rates.
 
@@ -22,11 +23,7 @@ The datasets were merged using `UNITID` to connect program-level outcomes with i
 
 ## Target Variable
 
-The outcome variable was based on:
-
-`BBRR3_FED_COMP_DFLT`
-
-This measures the percentage of undergraduate federal student-loan borrowers who defaulted within three years after completion.
+The outcome variable was based on `BBRR3_FED_COMP_DFLT`, which measures the percentage of undergraduate federal student-loan borrowers who defaulted within three years after completion.
 
 Because the original field included ranges, inequalities, and privacy-suppressed values, the project converted the variable into a binary classification target:
 
@@ -70,18 +67,11 @@ Precision was important because falsely flagging programs as high-risk could cre
 
 ## Deployment Concept
 
-A practical deployment would be an interactive dashboard where students, schools, or policymakers could filter by:
-
-- Credential type
-- Major category
-- Region
-- Institution type
+A practical deployment would be an interactive dashboard where students, schools, or policymakers could filter by credential type, major category, region, and institution type.
 
 The dashboard would support program-level financial transparency while avoiding individual-borrower assumptions.
 
-## Repository Contents
+## Files
 
-- `REPORT.md`: full project write-up
-- `notebooks/`: modeling and analysis notebook
-- `visuals/`: final charts and model interpretation outputs
-- `data/`: data source notes and access instructions
+- Main analysis notebook: `CollegeLoanDefaultRisk.ipynb`
+- Full written report: `college_scorecard_default_risk_paper.pdf`
